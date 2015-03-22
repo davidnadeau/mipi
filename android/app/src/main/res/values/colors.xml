@@ -3,4 +3,12 @@
     <color name="correct_answer_background">#43c612</color>
     <color name="wrong_answer_background">#e4041e</color>
     <color name="transparent_background">#07000000</color>
+
+    <color name="divider">#E0E0E0</color>
+    <color name="hint_text">#BDBDBD</color>
+    <color name="secondary">#707070</color>
+    <color name="primary">#212121</color>
+
+    <color name="PiQActionBarText">#fff</color>
+    <color name="PiQActionBarBackground">#212121</color>
 </resources>

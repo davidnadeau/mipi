@@ -6,7 +6,11 @@ package com.aliasapp.mipi.models;
 public class GameState {
     private static String currentUserInput;
     private int correctGuesses;
-    private int lives;
+    private static int lives;
+
+    public static int getLives() {
+        return lives;
+    }
 
     public enum States {CORRECT, WRONG, GAMEOVER}
 

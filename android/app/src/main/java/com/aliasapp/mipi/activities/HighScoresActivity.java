@@ -1,40 +1,28 @@
 package com.aliasapp.mipi.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.TextView;
 
 import com.aliasapp.mipi.R;
 import com.aliasapp.mipi.highscore.HighScore;
-import com.aliasapp.mipi.util.SharedPreferenceWrapper;
 
 
-public class MainActivity extends ActionBarActivity {
-    private static final String TAG = "MainActivity";
+public class HighScoresActivity extends ActionBarActivity {
+    private static final String TAG = "HighScores";
+    private static TextView highScores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        SharedPreferenceWrapper.init(this);
-        Log.v(TAG, "SCORES" );
-        Log.v(TAG, HighScore.readScores());
+        setContentView(R.layout.activity_highscores);
+        highScores = (TextView) findViewById(R.id.highscores);
+        Log.v(TAG, "SCORESSSS");
+        highScores.setText(HighScore.readScores());
     }
-
-    public void startGame(View view) {
-        startActivity(new Intent(this, GameActivity.class));
-    }
-
-
-    public void viewHighScores(View view) {
-        startActivity(new Intent(this, HighScoresActivity.class));
-    }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -57,5 +45,6 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
 }
