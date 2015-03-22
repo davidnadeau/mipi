@@ -1,10 +1,8 @@
 package com.aliasapp.mipi.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,31 +24,25 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 
-public class GameActivity extends ActionBarActivity {
+public class PracticeActivity extends ActionBarActivity {
     private static final String TAG = "MainActivity";
     private static PiChecker checker;
     private static GridView gridview;
     private static RelativeLayout livesLayout;
-    private static TextView lives;
-    private static TextView peeks;
     private static TextView currentScore;
     private static NumberScroller scroller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_practice);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
         getSupportActionBar().setIcon(R.drawable.actionbar_logo);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         livesLayout = (RelativeLayout) findViewById(R.id.lives_layout);
         checker = new PiChecker();
-        lives = (TextView) findViewById(R.id.lives);
-        peeks = (TextView) findViewById(R.id.peeks);
         currentScore = (TextView) findViewById(R.id.current_score);
-        currentScore.setText("Correct: 0");
-        lives.setText("" + GameState.getLives());
+        currentScore.setText("0");
         scroller = new NumberScroller(new TextView[]{
                 (TextView) findViewById(R.id.number0),
                 (TextView) findViewById(R.id.number1),
@@ -60,37 +52,25 @@ public class GameActivity extends ActionBarActivity {
                 (TextView) findViewById(R.id.number5),
                 (TextView) findViewById(R.id.number6)
         }, this);
-        scroller.init();
+        scroller.initPractice();
 
+//        piDisplay = (TextView) findViewById(R.id.pi_display);
         gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new KeypadAdapter(this));
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                if (checker.isPeeking(position)) {
-                    boolean canPeek = GameState.peek();
-                    if (canPeek) {
-                        Log.v(TAG, "PEEKING");
-                        scroller.peek();
-                        peeks.setText("" + GameState.getPeeks());
-                    } else {
-                        Log.v(TAG, "SHAKE");
-                        shake();
-                    }
-                    return;
-                }
                 switch (checker.guess(position)) {
                     case CORRECT:
-                        scroller.shift();
-                        currentScore.setText("Correct: " + GameState.getCorrectCount());
+                        scroller.shiftPractice();
+                        currentScore.setText("" + GameState.getCorrectCount());
+//                        flashColor(R.color.correct_answer_background);
                         break;
                     case WRONG:
-                        lives.setText("" + GameState.getLives());
                         shake();
+//                        flashColor(R.color.wrong_answer_background);
                         break;
                     case GAMEOVER:
-                        startActivity(new Intent(GameActivity.this, GameOverActivity.class));
-                        finish();
                         break;
                 }
             }

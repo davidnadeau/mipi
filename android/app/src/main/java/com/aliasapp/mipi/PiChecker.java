@@ -25,4 +25,8 @@ public class PiChecker {
     public String getInput() {
         return gameState.getCurrentUserInput();
     }
+
+    public boolean isPeeking(int position) {
+        return KeypadAdapter.isPeek(position);
+    }
 }

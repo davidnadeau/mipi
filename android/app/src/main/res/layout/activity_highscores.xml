@@ -1,27 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/piqback"
+    android:orientation="vertical">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
-        android:textSize="32sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="High Scores"
-        />
+        android:textSize="32sp" />
+
     <TextView
-        android:id="@+id/highscores"
-        android:gravity="center_horizontal"
-        android:textSize="24sp"
+        android:id="@+id/highscore0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <ScrollView
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/highscore1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/highscore2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/highscore3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/highscore4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/highscore5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/highscore6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/highscore7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/highscore8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/highscore9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="24sp" />
 
-
-        </ScrollView>
 </LinearLayout>

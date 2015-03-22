@@ -1,8 +1,8 @@
 package com.aliasapp.mipi.activities;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -13,15 +13,35 @@ import com.aliasapp.mipi.highscore.HighScore;
 
 public class HighScoresActivity extends ActionBarActivity {
     private static final String TAG = "HighScores";
-    private static TextView highScores;
+    private static TextView[] highScores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_highscores);
-        highScores = (TextView) findViewById(R.id.highscores);
-        Log.v(TAG, "SCORESSSS");
-        highScores.setText(HighScore.readScores());
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
+        getSupportActionBar().setIcon(R.drawable.actionbar_logo);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        highScores = new TextView[]{
+                (TextView) findViewById(R.id.highscore0),
+                (TextView) findViewById(R.id.highscore1),
+                (TextView) findViewById(R.id.highscore2),
+                (TextView) findViewById(R.id.highscore3),
+                (TextView) findViewById(R.id.highscore4),
+                (TextView) findViewById(R.id.highscore5),
+                (TextView) findViewById(R.id.highscore6),
+                (TextView) findViewById(R.id.highscore7),
+                (TextView) findViewById(R.id.highscore8),
+                (TextView) findViewById(R.id.highscore9)
+        };
+
+        loadBoard();
+    }
+
+    public void loadBoard() {
+        String[] topTen = HighScore.topTen();
+        for (int i = 0; i < highScores.length; i++)
+            highScores[i].setText(topTen[i]);
     }
 
     @Override

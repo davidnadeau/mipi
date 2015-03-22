@@ -2,6 +2,7 @@ package com.aliasapp.mipi.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -20,8 +21,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
+        getSupportActionBar().setIcon(R.drawable.actionbar_logo);
         SharedPreferenceWrapper.init(this);
-        Log.v(TAG, "SCORES" );
+        Log.v(TAG, "SCORES");
         Log.v(TAG, HighScore.readScores());
     }
 
@@ -35,6 +38,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    public void practice(View view) {
+        startActivity(new Intent(this, PracticeActivity.class));
+    }
+
+    public void showPi(View view) {
+        startActivity(new Intent(this, ShowPiActivity.class));
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

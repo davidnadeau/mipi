@@ -1,12 +1,12 @@
 package com.aliasapp.mipi;
 
 import android.content.Context;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.TextView;
 
 /**
  * Created by aliasapps on 15-03-21.
@@ -35,8 +35,9 @@ public class KeypadAdapter extends BaseAdapter {
         Button button;
         if (convertView == null) {
             button = new Button(mContext);
-            button.setLayoutParams(new GridView.LayoutParams(255, 255));
-            button.setPadding(32, 32, 32, 32);
+            button.setPadding(0, 0, 0, 0);
+            button.setHeight(225);
+            button.setTextSize(TypedValue.COMPLEX_UNIT_PX, 60);
         } else {
             button = (Button) convertView;
         }
@@ -55,10 +56,14 @@ public class KeypadAdapter extends BaseAdapter {
             "1", "2", "3",
             "4", "5", "6",
             "7", "8", "9",
-            "", "0", "."
+            "peek", "0", "."
     };
 
     public static char positionToNumber(int position) {
         return keypad[position].toCharArray()[0];
+    }
+
+    public static boolean isPeek(int position) {
+        return position == 9;
     }
 }

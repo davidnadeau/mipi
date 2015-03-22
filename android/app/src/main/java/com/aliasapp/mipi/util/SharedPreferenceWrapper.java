@@ -34,7 +34,7 @@ public class SharedPreferenceWrapper {
             oldVals = "";
         else
             oldVals += ",";
-        editor.putString(SharedPreferenceWrapper.KEY, ""+oldVals+ value);
+        editor.putString(SharedPreferenceWrapper.KEY, "" + oldVals + value);
         editor.commit();
     }
 

@@ -7,9 +7,14 @@ public class GameState {
     private static String currentUserInput;
     private int correctGuesses;
     private static int lives;
+    private static int peeks;
 
     public static int getLives() {
         return lives;
+    }
+
+    public static int getPeeks() {
+        return peeks;
     }
 
     public enum States {CORRECT, WRONG, GAMEOVER}
@@ -21,6 +26,7 @@ public class GameState {
         currentUserInput = "";
         correctGuesses = 0;
         lives = 3;
+        peeks = 3;
     }
 
     public String getCurrentUserInput() {
@@ -52,7 +58,16 @@ public class GameState {
     public static int getCorrectCount() {
         return currentUserInput.length();
     }
+
     public States getState() {
         return currentState;
+    }
+
+    public static boolean peek() {
+        if (peeks>0) {
+            --peeks;
+            return true;
+        }
+        return false;
     }
 }

@@ -1,40 +1,30 @@
 package com.aliasapp.mipi.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
+import com.aliasapp.mipi.C;
 import com.aliasapp.mipi.R;
-import com.aliasapp.mipi.highscore.HighScore;
-import com.aliasapp.mipi.models.GameState;
 
 
-public class GameOverActivity extends ActionBarActivity {
-    private static final String TAG = "MainActivity";
-
-    private static TextView correctGuesses;
+public class ShowPiActivity extends ActionBarActivity {
+    private static final String TAG = "ShowPi";
+    private static TextView piValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_over);
+        setContentView(R.layout.activity_showpi);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
         getSupportActionBar().setIcon(R.drawable.actionbar_logo);
-        correctGuesses = (TextView) findViewById(R.id.correct_guesses);
-        correctGuesses.setText("You got " + GameState.getCorrectCount() + " correct guesses!");
-        HighScore.saveScore(GameState.getCorrectCount());
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        piValue = (TextView) findViewById(R.id.pi_value);
+        piValue.setText(C.PI);
     }
-
-    public void playAgain(View view) {
-        startActivity(new Intent(this, GameActivity.class));
-        finish();
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -57,4 +47,6 @@ public class GameOverActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
