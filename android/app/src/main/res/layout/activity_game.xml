@@ -97,35 +97,48 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2.2"
-        android:weightSum="11">
-
-        <TextView
-            android:id="@+id/number0"
-            android:alpha="0.4"
+        android:weightSum="12">
+        <FrameLayout
+            android:layout_weight="1.8"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.25"
-            android:background="#00000000"
-            android:gravity="center_horizontal"
-            android:text="3"
-            android:textColor="@color/primary"
-            android:textSize="70sp" />
+            android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/number0"
+                android:alpha="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:gravity="center_horizontal"
+                android:text="\?"
+                android:textColor="@color/primary"
+                android:textSize="60sp" />
+            <TextView
+                android:id="@+id/number1"
+                android:paddingLeft="13dp"
+                android:alpha="0.4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:gravity="center_horizontal"
+                android:text="\?"
+                android:textColor="@color/primary"
+                android:textSize="70sp" />
+        </FrameLayout>
         <TextView
-            android:id="@+id/number1"
             android:alpha="0.6"
+            android:id="@+id/number2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_weight="1.75"
             android:background="#00000000"
-            android:gravity="center_horizontal"
-            android:text="."
+            android:text="1"
             android:textColor="@color/primary"
             android:textSize="80sp" />
 
         <TextView
-            android:alpha="0.8"
-            android:id="@+id/number2"
+            android:alpha="0.7"
+            android:id="@+id/number3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.75"
@@ -135,7 +148,7 @@
             android:textSize="90sp" />
 
         <TextView
-            android:id="@+id/number3"
+            android:id="@+id/number4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -146,8 +159,8 @@
             android:textSize="100sp" />
 
         <TextView
-            android:id="@+id/number4"
-            android:alpha="0.8"
+            android:id="@+id/number5"
+            android:alpha="0.7"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.75"
@@ -158,7 +171,7 @@
             android:textSize="90sp" />
 
         <TextView
-            android:id="@+id/number5"
+            android:id="@+id/number6"
             android:alpha="0.6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -169,19 +182,39 @@
             android:textColor="@color/primary"
             android:textSize="80sp" />
 
-        <TextView
-            android:id="@+id/number6"
-            android:alpha="0.4"
+        <FrameLayout
+            android:layout_weight="1.8"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.25"
-            android:background="#00000000"
-            android:gravity="center_horizontal"
-            android:text="\?"
-            android:textColor="@color/primary"
-            android:textSize="70sp" />
+            android:layout_marginRight="16dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/number7"
+                android:alpha="0.4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:gravity="center_horizontal"
+                android:text="\?"
+                android:textColor="@color/primary"
+                android:textSize="70sp" />
+            <TextView
+                android:paddingLeft="24dp"
+                android:id="@+id/number8"
+                android:alpha="0.2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:gravity="center_horizontal"
+                android:text="\?"
+                android:textColor="@color/primary"
+                android:textSize="60sp" />
+        </FrameLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></LinearLayout>
     <LinearLayout
         android:gravity="center_horizontal"
         android:layout_width="match_parent"

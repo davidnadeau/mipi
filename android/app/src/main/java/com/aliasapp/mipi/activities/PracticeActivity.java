@@ -50,7 +50,9 @@ public class PracticeActivity extends ActionBarActivity {
                 (TextView) findViewById(R.id.number3),
                 (TextView) findViewById(R.id.number4),
                 (TextView) findViewById(R.id.number5),
-                (TextView) findViewById(R.id.number6)
+                (TextView) findViewById(R.id.number6),
+                (TextView) findViewById(R.id.number7),
+                (TextView) findViewById(R.id.number8)
         }, this);
         scroller.initPractice();
 

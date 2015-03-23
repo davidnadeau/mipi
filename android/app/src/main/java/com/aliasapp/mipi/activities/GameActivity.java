@@ -20,6 +20,7 @@ import com.aliasapp.mipi.NumberScroller;
 import com.aliasapp.mipi.PiChecker;
 import com.aliasapp.mipi.R;
 import com.aliasapp.mipi.models.GameState;
+import com.aliasapp.mipi.util.Screen;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -40,6 +41,7 @@ public class GameActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        Screen.init(this);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
         getSupportActionBar().setIcon(R.drawable.actionbar_logo);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -58,7 +60,9 @@ public class GameActivity extends ActionBarActivity {
                 (TextView) findViewById(R.id.number3),
                 (TextView) findViewById(R.id.number4),
                 (TextView) findViewById(R.id.number5),
-                (TextView) findViewById(R.id.number6)
+                (TextView) findViewById(R.id.number6),
+                (TextView) findViewById(R.id.number7),
+                (TextView) findViewById(R.id.number8)
         }, this);
         scroller.init();
 

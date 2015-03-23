@@ -1,6 +1,7 @@
 package com.aliasapp.mipi.activities;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -18,15 +19,27 @@ public class GameOverActivity extends ActionBarActivity {
     private static final String TAG = "MainActivity";
 
     private static TextView correctGuesses;
+    private static TextView gameOver;
+    private static TextView toMenuText;
+    private static TextView playAgainText;
+    Typeface chalkFont;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
+        chalkFont = Typeface.createFromAsset(getAssets(), "fonts/chalkduster.ttf");
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
         getSupportActionBar().setIcon(R.drawable.actionbar_logo);
         correctGuesses = (TextView) findViewById(R.id.correct_guesses);
+        gameOver = (TextView) findViewById(R.id.game_over);
+        toMenuText = (TextView) findViewById(R.id.to_menu_text);
+        playAgainText = (TextView) findViewById(R.id.play_again_text);
         correctGuesses.setText("You got " + GameState.getCorrectCount() + " correct guesses!");
+        correctGuesses.setTypeface(chalkFont);
+        gameOver.setTypeface(chalkFont);
+        toMenuText.setTypeface(chalkFont);
+        playAgainText.setTypeface(chalkFont);
         HighScore.saveScore(GameState.getCorrectCount());
     }
 
@@ -34,7 +47,10 @@ public class GameOverActivity extends ActionBarActivity {
         startActivity(new Intent(this, GameActivity.class));
         finish();
     }
-
+    public void toMenu(View view) {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

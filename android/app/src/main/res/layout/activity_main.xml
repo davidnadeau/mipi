@@ -10,111 +10,126 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/piq_main_logo"
         android:scaleType="fitCenter" />
 
     <LinearLayout
-        android:gravity="center_horizontal|center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
         android:orientation="vertical">
 
         <LinearLayout
-            android:gravity="center_horizontal|center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_margin="8dp"
-                android:layout_height="120dp"
-                android:layout_width="120dp"
-                android:background="@drawable/startgame"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="startGame"
-                android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/startgame"
+                    android:clickable="true"
+                    android:onClick="startGame" />
 
                 <TextView
+                    android:id="@+id/start_game_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="bottom"
-                    android:text="Start Game"
-                    android:textColor="#222"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:text="Play"
+                    android:textColor="#fff"
+                    android:textSize="24sp" />
+            </RelativeLayout>
 
 
-            <LinearLayout
-                android:layout_margin="8dp"
-                android:layout_height="120dp"
-                android:layout_width="120dp"
-                android:background="@drawable/practice"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="practice"
-                android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/practice"
+                    android:clickable="true"
+                    android:onClick="practice" />
 
                 <TextView
+                    android:id="@+id/practice_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="bottom"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
                     android:text="Practice"
-                    android:textColor="#222"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                    android:textColor="#fff"
+                    android:textSize="24sp" />
+            </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:gravity="center_horizontal|center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
             android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp">
 
-            <LinearLayout
-                android:layout_margin="8dp"
-                android:layout_height="120dp"
-                android:layout_width="120dp"
-                android:background="@drawable/showpi"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="showPi"
-                android:orientation="horizontal">
-
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="bottom"
-                    android:text="Show Pi"
-                    android:textColor="#222"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_margin="8dp"
-                android:layout_height="120dp"
-                android:layout_width="120dp"
-                android:background="@drawable/highscores"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="viewHighScores"
-                android:orientation="horizontal">
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/showpi"
+                    android:clickable="true"
+                    android:onClick="showPi" />
 
                 <TextView
+                    android:id="@+id/show_pi_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:gravity="bottom"
-                    android:text="High Scores"
-                    android:textColor="#222"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:text="Play"
+                    android:textColor="#fff"
+                    android:textSize="24sp" />
+            </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp">
+
+                <ImageView
+                    android:id="@+id/highscore_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/highscores"
+                    android:clickable="true"
+                    android:onClick="viewHighScores" />
+
+                <TextView
+                    android:layout_below="@+id/highscore_image"
+                    android:id="@+id/high_scores_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Leaderboard"
+                    android:textColor="#fff"
+                    android:textSize="24sp" />
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

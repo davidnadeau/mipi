@@ -1,12 +1,16 @@
 package com.aliasapp.mipi;
 
 import android.content.Context;
+import android.util.Log;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
+
+import com.aliasapp.mipi.util.Screen;
 
 /**
  * Created by aliasapps on 15-03-21.
@@ -32,11 +36,16 @@ public class KeypadAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, final ViewGroup parent) {
+        int padding = 4;
+        int buttonHeight = (int) (((float)Screen.getHeight() * .5/4)) ;
+        int buttonWidth = (int) (((float)Screen.getHeight() * .5/3)) ;
+        Log.v("TEST", "heiGHT: " + buttonHeight);
         Button button;
         if (convertView == null) {
             button = new Button(mContext);
             button.setPadding(0, 0, 0, 0);
-            button.setHeight(225);
+            button.setHeight(buttonHeight);
+            button.setWidth(buttonWidth);
             button.setTextSize(TypedValue.COMPLEX_UNIT_PX, 60);
         } else {
             button = (Button) convertView;

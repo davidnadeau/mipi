@@ -11,4 +11,6 @@
 
     <color name="PiQActionBarText">#fff</color>
     <color name="PiQActionBarBackground">#020302</color>
+
+    <color name="SelectedChalk">#DECD7B</color>
 </resources>

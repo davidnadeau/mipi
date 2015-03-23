@@ -1,33 +1,84 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="10"
     android:background="@drawable/piqback"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="10"
     tools:context=".GameActivity">
 
 
     <TextView
-        android:gravity="center"
-        android:textSize="24dp"
+        android:id="@+id/game_over"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GAME OVER"/>
+        android:gravity="center"
+        android:text="GAME OVER"
+        android:textSize="30dp" />
+
     <TextView
         android:id="@+id/correct_guesses"
-        android:gravity="center"
-        android:textSize="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
-    <Button
+        android:gravity="center"
+        android:text="You got 10 correct guesses"
+        android:textSize="24dp" />
+
+    <LinearLayout
+        android:paddingTop="24dp"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="Play Again"
-        android:onClick="playAgain"/>
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/playagain"
+                android:clickable="true"
+                android:onClick="playAgain" />
+
+            <TextView
+                android:id="@+id/play_again_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:gravity="center"
+                android:text="Play Again"
+                android:textColor="#fff"
+                android:textSize="24sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tomenu"
+                android:clickable="true"
+                android:onClick="toMenu" />
+
+            <TextView
+                android:id="@+id/to_menu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:gravity="center"
+                android:text="Menu"
+                android:textColor="#fff"
+                android:textSize="24sp" />
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>
