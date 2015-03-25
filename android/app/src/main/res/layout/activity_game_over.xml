@@ -35,14 +35,14 @@
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal">
         <RelativeLayout
-            android:layout_width="140dp"
+            android:layout_width="160dp"
             android:layout_height="140dp">
 
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="89dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/playagain"
+                android:background="@drawable/startgame"
                 android:clickable="true"
                 android:onClick="playAgain" />
 
@@ -58,14 +58,14 @@
                 android:textSize="24sp" />
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="140dp"
+            android:layout_width="160dp"
             android:layout_height="140dp">
 
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="89dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/tomenu"
+                android:background="@drawable/menu"
                 android:clickable="true"
                 android:onClick="toMenu" />
 

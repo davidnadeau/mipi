@@ -28,11 +28,11 @@
             android:orientation="horizontal">
 
             <RelativeLayout
-                android:layout_width="140dp"
+                android:layout_width="160dp"
                 android:layout_height="140dp">
 
                 <ImageView
-                    android:layout_width="100dp"
+                    android:layout_width="89dp"
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/startgame"
@@ -53,11 +53,11 @@
 
 
             <RelativeLayout
-                android:layout_width="140dp"
+                android:layout_width="160dp"
                 android:layout_height="140dp">
 
                 <ImageView
-                    android:layout_width="100dp"
+                    android:layout_width="89dp"
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/practice"
@@ -83,12 +83,12 @@
             android:gravity="center_horizontal|center_vertical"
             android:orientation="horizontal">
             <RelativeLayout
-                android:layout_width="140dp"
+                android:layout_width="160dp"
                 android:layout_height="140dp">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="89dp"
+                    android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/showpi"
                     android:clickable="true"
@@ -101,18 +101,18 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="90dp"
                     android:gravity="center"
-                    android:text="Play"
+                    android:text="Memorize"
                     android:textColor="#fff"
                     android:textSize="24sp" />
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="140dp"
+                android:layout_width="160dp"
                 android:layout_height="140dp">
 
                 <ImageView
                     android:id="@+id/highscore_image"
-                    android:layout_width="wrap_content"
+                    android:layout_width="89dp"
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/highscores"
@@ -120,13 +120,13 @@
                     android:onClick="viewHighScores" />
 
                 <TextView
-                    android:layout_below="@+id/highscore_image"
                     android:id="@+id/high_scores_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="90dp"
                     android:gravity="center"
-                    android:text="Leaderboard"
+                    android:text="Highscores"
                     android:textColor="#fff"
                     android:textSize="24sp" />
             </RelativeLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aliasapp.mipi" >
+    package="com.piq2015.piQ" >
 
     <application
         android:allowBackup="true"
@@ -8,8 +8,8 @@
         android:label="piQ"
         android:theme="@style/PiQTheme">
         <activity
-            android:name=".activities.MainActivity"
-            android:label="Home"
+            android:name="com.piq2015.piQ.activities.MainActivity"
+            android:label="piQ"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,41 +18,46 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.GameActivity"
+            android:name="com.piq2015.piQ.activities.GameActivity"
             android:label="Game"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
+                android:value="com.piq2015.piQ.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.GameOverActivity"
+            android:name="com.piq2015.piQ.activities.GameOverActivity"
             android:label="Game Over"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".activities.HighScoresActivity"
+            android:name="com.piq2015.piQ.activities.HighScoresActivity"
             android:label="High Scores"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
+                android:value="com.piq2015.piQ.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.PracticeActivity"
+            android:name="com.piq2015.piQ.activities.PracticeActivity"
             android:label="Practice"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
+                android:value="com.piq2015.piQ.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.ShowPiActivity"
+            android:name="com.piq2015.piQ.activities.ShowPiActivity"
             android:label="Show Pi"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
+                android:value="com.piq2015.piQ.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.piq2015.piQ.activities.SettingsActivity"
+            android:label="Settings"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

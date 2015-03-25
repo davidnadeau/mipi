@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/high_scores_screen_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -14,64 +15,10 @@
         android:textSize="32sp" />
 
     <TextView
-        android:id="@+id/highscore0"
+        android:lines="10"
+        android:id="@+id/highscore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/highscore1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/highscore2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/highscore3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/highscore4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/highscore5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/highscore6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/highscore7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/highscore8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="24sp" />
-    <TextView
-        android:id="@+id/highscore9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="24sp" />
-
+        android:textSize="22sp" />
 </LinearLayout>
